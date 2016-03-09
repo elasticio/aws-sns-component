@@ -1,19 +1,20 @@
 {
-    "name": "hello-world",
-    "version": "0.0.3",
-    "description": "elastic.io hello world component",
-    "scripts": {
-        "test": "exit 0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:elasticio/hello-world-nodejs.git"
-    },
-    "author": "elastic.io GmbH",
-    "license": "Apache-2.0",
-    "dependencies": {
-        "q": "^1.4.1",
-        "elasticio-sailor-nodejs": "1.1.2",
-        "elasticio-node": "0.0.5"
-    }
+  "name": "hello-world",
+  "version": "0.0.3",
+  "description": "elastic.io hello world component",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elasticio/hello-world-nodejs.git"
+  },
+  "author": "elastic.io GmbH",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.2.42",
+    "elasticio-node": "0.0.5",
+    "elasticio-sailor-nodejs": "1.1.2",
+    "q": "^1.4.1"
+  }
 }

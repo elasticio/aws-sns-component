@@ -20,7 +20,7 @@
             "main": "./lib/actions/public.js",
             "title": "Publish",
             "fields": {
-                "TopicArn": {
+                "topicArn": {
                     "label": "TopicArn",
                     "required": true,
                     "viewClass": "TextFieldView",
