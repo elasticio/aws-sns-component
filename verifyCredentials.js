@@ -4,7 +4,10 @@ function verify(credentials, cb) {
 
     console.log('About to verify credentials');
 
-    if (!credentials.name) {
+    var accessKeyId = credentials.accessKeyId;
+    var accessKeySecret = credentials.accessKeySecret;
+
+    if (!accessKeyId || !accessKeySecret) {
         console.log('Invalid credentials');
 
         return cb(null, {verified: false});
