@@ -1,10 +1,10 @@
 {
     "type": "object",
     "properties": {
-        "greeting": {
+        "message": {
             "type": "string",
             "required": true,
-            "title": "Greeting"
+            "title": "Message"
         }
     }
 }

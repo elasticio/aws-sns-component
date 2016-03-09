@@ -1,32 +1,35 @@
 {
-    "title": "hello world nodejs",
-    "description": "Hello world component for the elastic.io platform",
+    "title": "Amazon SNS",
+    "description": "Component to work with Amazon SNS",
     "credentials": {
         "fields": {
-            "name": {
-                "label": "Your name",
+            "accessKeyId": {
+                "label": "Access Key Id",
+                "required": true,
+                "viewClass": "TextFieldView"
+            },
+            "accessKeySecret": {
+                "label": "Secret Access Key",
                 "required": true,
                 "viewClass": "TextFieldView"
             }
         }
     },
-    "triggers": {
-        "getHello": {
-            "main": "./lib/triggers/getHello.js",
-            "type": "polling",
-            "title": "Query Hello",
-            "metadata": {
-                "out": "./lib/schemas/getHello.out.json"
-            }
-        }
-    },
     "actions": {
-        "updateHello": {
-            "main": "./lib/actions/updateHello.js",
-            "title": "Update Hello",
+        "publish": {
+            "main": "./lib/actions/public.js",
+            "title": "Publish",
+            "fields": {
+                "TopicArn": {
+                    "label": "TopicArn",
+                    "required": true,
+                    "viewClass": "TextFieldView",
+                    "placeholder" : "arn:aws:sns:eu-west-1:123456789:mysnsrocks"
+                }
+            },
             "metadata": {
-                "in": "./lib/schemas/updateHello.in.json",
-                "out": "./lib/schemas/updateHello.out.json"
+                "in": "./lib/schemas/publish.in.json",
+                "out": "./lib/schemas/publish.out.json"
             }
         }
     }
