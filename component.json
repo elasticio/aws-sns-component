@@ -1,6 +1,7 @@
 {
     "title": "Amazon SNS",
     "description": "Component to work with Amazon SNS",
+    "docsUrl":"https://github.com/elasticio/aws-sns-component",
     "credentials": {
         "fields": {
             "accessKeyId": {
