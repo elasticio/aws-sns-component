@@ -14,7 +14,7 @@
   "dependencies": {
     "aws-sdk": "^2.2.42",
     "elasticio-node": "0.0.5",
-    "elasticio-sailor-nodejs": "https://github.com/elasticio/sailor-nodejs.git#c92199add4a2667ded00f04ce49c3cb580fda911",
+    "elasticio-sailor-nodejs": "1.2.1",
     "q": "^1.4.1"
   }
 }

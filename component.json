@@ -47,7 +47,6 @@
                 }
             },
             "metadata": {
-                "in": "./lib/schemas/publish.in.json",
                 "out": "./lib/schemas/publish.out.json"
             }
         }
