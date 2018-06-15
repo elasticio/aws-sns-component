@@ -1,20 +1,21 @@
 {
-  "name": "hello-world",
+  "name": "aws-sns-component",
   "version": "0.0.3",
-  "description": "elastic.io hello world component",
+  "description": "elastic.io AWS Simple Notification Service integration component",
   "scripts": {
     "test": "exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:elasticio/hello-world-nodejs.git"
+    "url": "git@github.com:elasticio/aws-sns-component.git"
   },
   "author": "elastic.io GmbH",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.2.42",
-    "elasticio-node": "0.0.5",
-    "elasticio-sailor-nodejs": "1.2.1",
+    "aws-sdk": "^2.258.1",
+    "elasticio-node": "0.0.9",
+    "elasticio-sailor-nodejs": "^2.2.1",
+    "npm-check-updates": "^2.14.2",
     "q": "^1.4.1"
   }
 }
