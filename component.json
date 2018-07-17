@@ -19,6 +19,7 @@
     "actions": {
         "publish": {
             "main": "./lib/actions/publish.js",
+            "description": "This action will publish a message to SNS Topic",
             "title": "Publish",
             "fields": {
                 "topicArn": {
