@@ -1,39 +1,73 @@
-# aws-sns-component
+# AWS SNS component
 
-> Amazon SNS _component template_ for the [elastic.io platform](http://www.elastic.io "elastic.io platform").
+## Description
 
-This is an open source component template for [Amazon SNS](https://aws.amazon.com/sns/) Amazon Simple Notification Service which is developed specifically to run on [elastic.io platform](http://www.elastic.io "elastic.io platform"). You can clone it and change it as you wish. However, **if you plan to deploy it into [elastic.io platform](http://www.elastic.io "elastic.io platform") you must follow sets of instructions to succeed**.
+AWS Simple Notification Service integration component.
 
-> **PLEASE NOTE:** This is a working component for **Amazon SNS**, however, it may not be suitable for every use case. Not all functionalities are included in this component template. **It is your responsibility to add and modify this component to suit your integration needs.**
+## How works
 
-## Before you Begin
+The component publishes a message to the SNS topic in a specific Amazon SNS
+service access point.
 
-Before you can deploy any code into our system **you must be a registered elastic.io platform user**. Please see our home page at [http://www.elastic.io](http://www.elastic.io) to learn how.
+## Requirements
 
-> Any attempt to deploy a code into our platform without a registration would fail.
+### Environment variables
 
-After the registration and opening of the account you must **[upload your SSH Key](http://docs.elastic.io/docs/ssh-key)** into our platform.
+None required.
 
-> If you fail to upload you SSH Key you will get **permission denied** error during the deployment.
+## Credentials
 
-## Getting Started
+The component requires the following credentials to authenticate with the AWS services:
 
-After registration and uploading of your SSH Key you can proceed to deploy it into our system. At this stage we suggest you to:
-* [Create a team](http://docs.elastic.io/page/team-management) to work on your new component. This is not required but will be automatically created using random naming by our system so we suggest you name your team accordingly.
-* [Create a repository](http://docs.elastic.io/page/repository-management) where your new component is going to *reside* inside the team that you have just created. For a simplicity you can name your repository **aws-sns-component** or **aws-sns**.
+*   `AWS Access Key` - this is your Access Key ID when you created the AWS account
+*   `AWS Access Secret` - this is your Secret access key given to you during the key creation
 
-```bash
-$ git clone https://github.com/elasticio/aws-sns-component.git aws-sns-component
+These keys are displayed only once, just after the creation of the credentials in AWS.
+To generate new ones follow the instructions given at [Getting Your Credentials](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-your-credentials.html) page.
 
-$ cd aws-sns-component
+## Triggers
+
+This component has no trigger functions. This means it will not be accessible to
+select as a first component during the integration flow design.
+
+## Actions
+
+### Publish
+
+This action will publish a message to an SNS Topic. There are two required fields
+in input:
+
+*   `TopicArn` - this is the specific topic name. More about the topic format below.
+*   `AWS Region` - set this to the specific Amazon SNS service access point in the required region.
+
+**Topic ARN**
+
+Amazon SNS assigns a unique ARN (Amazon Resource Name) to the each topic. It
+includes the service name, the region and the AWS ID of the user and the topic
+name. For example the ARN for the topic named `mysnsrocks` created by a user with
+the AWS account ID `123456789` and hosted in the EU West region would be:
 ```
-Now you can edit your version of **aws-sns-component** and change according to your needs - that is if you know what you are doing. Or you can just ``PUSH``it into our system to see the process in action:
-
-```bash
-$ git remote add elasticio your-created-team-name@git.elastic.io:aws-sns-component.git
-
-$ git push elasticio master
+arn:aws:sns:eu-west-1:123456789:mysnsrocks
 ```
-Obviously the naming of your team and repository is entirely up-to you and if you do not put any corresponding naming our system will auto generate it for you but the naming might not entirely correspond to your project requirements.
 
-To learn on how to use this component please check our [HOW TO USE](https://github.com/elasticio/aws-sns-component/blob/master/HOW_TO_USE.md) guide.
+**AWS Regions**
+
+Here are the regions the component supports:
+
+*   `us-east-1` - US East (N. Virginia)
+*   `us-west-1` - US West (N. California)
+*   `us-west-2` - US West (Oregon)
+*   `eu-west-1` - EU (Ireland)
+*   `eu-central-1` - EU (Frankfurt)
+*   `ap-northeast-1` - Asia Pacific (Tokyo)
+*   `ap-northeast-2` - Asia Pacific (Seoul)
+*   `ap-southeast-1` - Asia Pacific (Singapore)
+*   `ap-southeast-2` - Asia Pacific (Sydney)
+*   `sa-east-1` - South America (Sao Paulo)
+
+More information about the regions is available at the
+[AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html#sns_region) document.
+
+## License
+
+Apache-2.0 © [elastic.io GmBH](https://www.elastic.io)
