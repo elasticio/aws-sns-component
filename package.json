@@ -1,6 +1,5 @@
 {
   "name": "aws-sns-component",
-  "buildType": "docker",
   "version": "1.2.2",
   "description": "elastic.io AWS Simple Notification Service integration component",
   "scripts": {

@@ -1,5 +1,6 @@
 {
     "title": "Amazon SNS",
+    "buildType": "docker",
     "description": "Component to work with Amazon SNS",
     "docsUrl":"https://github.com/elasticio/aws-sns-component",
     "credentials": {
