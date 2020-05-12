@@ -1,20 +1,18 @@
-module.exports = verify;
-
+/* eslint-disable consistent-return */
 function verify(credentials, cb) {
+  this.logger.info('About to verify credentials');
 
-    console.log('About to verify credentials');
+  const { accessKeyId, accessKeySecret } = credentials;
 
-    var accessKeyId = credentials.accessKeyId;
-    var accessKeySecret = credentials.accessKeySecret;
+  if (!accessKeyId || !accessKeySecret) {
+    this.logger.info('Invalid credentials');
 
-    if (!accessKeyId || !accessKeySecret) {
-        console.log('Invalid credentials');
+    return cb(null, { verified: false });
+  }
 
-        return cb(null, {verified: false});
-    }
+  this.logger.info('Successfully verified credentials');
 
-    console.log('Successfully verified credentials');
-
-    cb(null, {verified: true});
+  cb(null, { verified: true });
 }
 
+module.exports = verify;

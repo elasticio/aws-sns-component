@@ -1,8 +1,9 @@
 {
   "name": "aws-sns-component",
-  "version": "0.0.3",
+  "version": "1.2.2",
   "description": "elastic.io AWS Simple Notification Service integration component",
   "scripts": {
+    "pretest": "eslint lib verifyCredentials.js --fix",
     "test": "exit 0"
   },
   "repository": {
@@ -12,10 +13,16 @@
   "author": "elastic.io GmbH",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.258.1",
+    "aws-sdk": "2.258.1",
     "elasticio-node": "0.0.9",
-    "elasticio-sailor-nodejs": "^2.2.1",
-    "npm-check-updates": "^2.14.2",
-    "q": "^1.4.1"
+    "elasticio-sailor-nodejs": "2.6.7",
+    "npm-check-updates": "2.14.2",
+    "q": "1.4.1"
+  },
+  "devDependencies": {
+    "eslint": "5.6.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0"
   }
 }
