@@ -16,10 +16,10 @@
   "author": "elastic.io GmbH",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "2.258.1",
+    "aws-sdk": "2.267.1",
     "elasticio-node": "0.0.9",
     "elasticio-sailor-nodejs": "2.6.7",
-    "npm-check-updates": "2.14.2",
+    "npm-check-updates": "2.15.0",
     "q": "1.4.1"
   },
   "devDependencies": {
