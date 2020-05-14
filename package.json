@@ -3,7 +3,6 @@
   "version": "1.2.2",
   "description": "elastic.io AWS Simple Notification Service integration component",
   "scripts": {
-    "pretest": "eslint lib verifyCredentials.js --fix",
     "test": "exit 0"
   },
   "repository": {
