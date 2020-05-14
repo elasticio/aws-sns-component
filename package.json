@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git@github.com:elasticio/aws-sns-component.git"
   },
+  "engines": {
+    "node": ">=12.13.0"
+  },
   "author": "elastic.io GmbH",
   "license": "Apache-2.0",
   "dependencies": {
