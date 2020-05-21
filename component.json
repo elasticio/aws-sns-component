@@ -1,5 +1,6 @@
 {
     "title": "Amazon SNS",
+    "buildType": "docker",
     "description": "Component to work with Amazon SNS",
     "docsUrl":"https://github.com/elasticio/aws-sns-component",
     "credentials": {
@@ -19,7 +20,10 @@
     "actions": {
         "publish": {
             "main": "./lib/actions/publish.js",
-            "description": "This action will publish a message to SNS Topic",
+            "help": {
+                "description": "This action will publish a message to SNS Topic",
+                "link": "/components/aws-sns/index.html#publish"
+            },
             "title": "Publish",
             "fields": {
                 "topicArn": {
