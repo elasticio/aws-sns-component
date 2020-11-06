@@ -1,3 +1,9 @@
+## 1.2.3 (November 12, 2020)
+
+* Upgrade to sailor 2.6.18
+* Annual audit of the component code to check if it exposes a sensitive data in the logs
+* Annual npm vulnerabilities audit
+
 ## 1.2.2 (May 22, 2020)
 
 * Update Sailor version to 2.6.7
