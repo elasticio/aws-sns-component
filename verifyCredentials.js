@@ -6,7 +6,6 @@ function verify(credentials, cb) {
 
   if (!accessKeyId || !accessKeySecret) {
     this.logger.info('Invalid credentials');
-
     return cb(null, { verified: false });
   }
 
