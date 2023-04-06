@@ -1,6 +1,5 @@
 {
   "name": "aws-sns-component",
-  "version": "1.2.3",
   "description": "elastic.io AWS Simple Notification Service integration component",
   "scripts": {
     "pretest": "eslint lib verifyCredentials.js --fix",
